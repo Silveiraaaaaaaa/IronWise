@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IronWise</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link href="https://db.onlinewebfonts.com/c/7f803db9a371fc22ada93bdbd78b7f1c?family=AndoSemibold" rel="stylesheet">
+
+    <link href="https://fonts.cdnfonts.com/css/aquamarine" rel="stylesheet">
+
+    <link href="https://fonts.cdnfonts.com/css/six-thousand" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/container-central.css">
+</head>
+
+<script>
+    function calcularPeso() {
+        let altura = 1;
+        let raio = 3;
+
+        const pi = 3.14;
+
+        //Peso do barril (Cálculo de volume do barril x densidade média do cavaco)
+        let pesoBarril = altura * pi * Math.pow(raio, 2) * 550;
+
+        document.getElementById('resultado').innerText =
+            `O peso do cavaco no barril é aproximadamente ${pesoBarril.toFixed(0)} quilogramas.`;
+    }
+
+    window.onload = calcularPeso;
+</script>
+
+<body>
+
+    <div class="container-principal">
+
+        <nav>
+            <div class="menu-left">
+                <h5><img src="assets\IronWiseLogo.png" width="108" height="108"></h5>
+            </div>
+            <div class="menu-right">
+                <img src="assets\SAC.png" width="80" height="80">
+                <img src="assets\pontos.png" width="80" height="80">
+
+            </div>
+        </nav>
+        <div class="container-central">
+            <div class="info">
+                <p id="resultado"></p>
+
+            </div>
+            <div class="foto">
+                <img src="./assets/barril.jpg">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
